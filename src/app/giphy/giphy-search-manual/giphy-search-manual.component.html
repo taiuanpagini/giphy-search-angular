@@ -1,0 +1,19 @@
+<div class="container">
+    <div class="row">
+        <div class="col-md-12">
+            <form class="form-inline">
+                <label class="sr-only" for="inlineFormInput">Limite</label>
+                <input type="text" class="form-control mb-2 mr-sm-2 mb-sm-0" id="inlineFormInput" placeholder="Limite" [(ngModel)]="limit" name="limit">
+
+                <label class="sr-only" for="inlineFormInputGroup">Termo a Pesquisar</label>
+                <input type="text" class="form-control mb-2 mr-sm-2 mb-sm-0" placeholder="Termo a Pesquisar" [(ngModel)]="term" name="term" (keyup.enter)="pesquisarGiphy()">
+
+                <input type="button" value="Pesquisar" class="btn btn-primary" (click)="pesquisarGiphy()">
+            </form>
+        </div>
+    </div>
+</div>
+
+
+<!--{{gifs | json}}-->
+<giphy-search-list [gifsList]="gifs"></giphy-search-list>
